@@ -4,4 +4,10 @@ resource "aws_ebs_snapshot" "kafka_ebs_snapshot" {
   tags = {
     Name = "Kafka EBS ${timestamp()}"
   }
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 }
