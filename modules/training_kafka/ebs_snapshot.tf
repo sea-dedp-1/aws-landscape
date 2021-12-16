@@ -7,7 +7,7 @@ resource "aws_ebs_snapshot" "kafka_ebs_snapshot" {
 
   lifecycle {
     ignore_changes = [
-      tags,
+      tags
     ]
   }
 }
