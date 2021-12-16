@@ -9,7 +9,7 @@ jobs:
     <<: *defaults
     steps:
     - run:
-        command: echo "hello world"
+        command: echo $(terraform version)
 
  firstTimeSetup:
    <<: *defaults
