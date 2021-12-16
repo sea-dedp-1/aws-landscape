@@ -10,5 +10,6 @@ variable "kafka" {
   type = "map"
   default = {
     instance_type = "t2.medium"
+    volume_size = "64"
   }
 }
