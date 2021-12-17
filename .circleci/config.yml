@@ -123,10 +123,10 @@ workflows:
           requires:
             - approvebuildClientVPN
 
-      - approveDestroyProductionEnvironment:
-          type: approval
-          requires:
-            - dummy
-      - destroyProductionEnvironment:
-          requires:
-            - approveDestroyProductionEnvironment
+#      - approveDestroyProductionEnvironment:
+#          type: approval
+#          requires:
+#            - dummy
+#      - destroyProductionEnvironment:
+#          requires:
+#            - approveDestroyProductionEnvironment
