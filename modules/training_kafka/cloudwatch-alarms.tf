@@ -7,6 +7,7 @@ resource "aws_cloudwatch_metric_alarm" "kafka_disk_utilisation_alarm" {
   period              = "300"
   statistic           = "Average"
   threshold           = "80"
+  alarm_actions       = ["${aws_sns_topic.kafka_alarm_notification.arn}"]
   alarm_description   = "This metric monitors disk space utilization for Kafka"
   datapoints_to_alarm = "1"
   treat_missing_data  = "missing"
