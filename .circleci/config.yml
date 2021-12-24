@@ -60,7 +60,6 @@ jobs:
      - checkout
      - run:
          command: source /okta_venv/bin/activate;
-#                 ./scripts/run_terraform.sh $TRAINING_COHORT lambda destroy -input=false -auto-approve;
                  ./scripts/run_terraform.sh $TRAINING_COHORT client_vpn destroy -input=false -auto-approve;
                  ./scripts/run_terraform.sh $TRAINING_COHORT monitoring_dashboard destroy -input=false -auto-approve;
                  ./scripts/run_terraform.sh $TRAINING_COHORT ingester destroy -input=false -auto-approve -var-file=prod-env.tfvars ;
